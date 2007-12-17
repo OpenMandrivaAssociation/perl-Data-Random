@@ -12,7 +12,6 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-GD
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 A module used to generate random data.  Useful mostly for test
