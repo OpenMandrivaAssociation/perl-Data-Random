@@ -1,25 +1,27 @@
-%define real_name Data-Random
+%define upstream_name    Data-Random
+%define upstream_version 0.05
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Data::Random - Perl module to generate random data
-Name:		perl-%{real_name}
-Version:	0.05
-Release:	%mkrel 4
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-GD
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 A module used to generate random data.  Useful mostly for test
 programs.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,4 +42,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Data/Random.pm
 %{perl_vendorlib}/Data/Random/*
 %{_mandir}/*/*
-
