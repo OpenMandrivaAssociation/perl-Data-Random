@@ -12,7 +12,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-Date-Calc
-BuildRequires:	perl-GD
+BuildRequires:	perl-GD perl-YAML-Tiny
 BuildArch:	noarch
 
 %description
