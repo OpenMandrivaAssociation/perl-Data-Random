@@ -18,6 +18,7 @@ BuildRequires:	perl(Module::Install)
 BuildRequires:	perl(File::ShareDir::Install)
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Time::Piece)
+BuildRequires:	perl(Time::MockTime)
 
 %description
 A module used to generate random data.  Useful mostly for test
