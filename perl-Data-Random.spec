@@ -15,6 +15,7 @@ BuildRequires:	perl-GD
 BuildRequires:	perl-YAML-Tiny
 BuildRequires:	perl-devel
 BuildRequires:	perl(Module::Install)
+BuildRequires:	perl(File::ShareDir::Install)
 
 %description
 A module used to generate random data.  Useful mostly for test
