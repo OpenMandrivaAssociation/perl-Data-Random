@@ -17,13 +17,14 @@ BuildRequires:	perl-devel
 BuildRequires:	perl(Module::Install)
 BuildRequires:	perl(File::ShareDir::Install)
 BuildRequires:	perl(Test::More)
+BuildRequires:	perl(Time::Piece)
 
 %description
 A module used to generate random data.  Useful mostly for test
 programs.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -n %{modname}-%{modver} -p1
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
@@ -41,5 +42,3 @@ programs.
 %{perl_vendorlib}/Data/Random.pm
 %{perl_vendorlib}/Data/Random/*
 %{_mandir}/man3/*
-
-
