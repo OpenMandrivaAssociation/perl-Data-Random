@@ -1,10 +1,10 @@
 %define modname	Data-Random
-%define modver 0.11
+%define modver 0.13
 
 Summary:	Data::Random - Perl module to generate random data
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	7
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -14,6 +14,7 @@ BuildRequires:	perl-Date-Calc
 BuildRequires:	perl-GD
 BuildRequires:	perl-YAML-Tiny
 BuildRequires:	perl-devel
+BuildRequires:	perl(Module::Install)
 
 %description
 A module used to generate random data.  Useful mostly for test
@@ -23,14 +24,14 @@ programs.
 %setup -qn %{modname}-%{modver}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%__perl Makefile.PL INSTALLDIRS=vendor OPTIMIZE="%{optflags}"
+%make_build
 
 %check
 %make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README*
