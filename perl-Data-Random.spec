@@ -1,14 +1,14 @@
 %define modname	Data-Random
-%define modver 0.13
+%define modver 0.15
 
 Summary:	Data::Random - Perl module to generate random data
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	%{modver}
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Data/Data-Random-%{modver}.tar.gz
+Url:		https://github.com/barefootcoder/Data-Random
+Source0:	https://cpan.metacpan.org/authors/id/B/BA/BAREFOOT/Data-Random-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-Date-Calc
